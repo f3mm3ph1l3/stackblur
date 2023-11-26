@@ -53,6 +53,12 @@ $ stackblur -in image/sample.png -out image/output.png -radius 10
 ```
 The cli command supports a `-gif` flag, which if set as true it visualize the bluring process by outputting the result into a gif file.
 
+## Docker
+Using the `Docker image`:
+```
+docker run --rm -v $PWD:/home -it ghcr.io/f3mm3ph1l3/stackblur:master -in $INPUT_IMAGE -out $OUTPUT_IMAGE -radius $BLUR_DEGREE # defaults to 20
+```
+
 ## API
 
 The usage of the API is very simple: you need to expose an image file and a blur radius to the `Process` function. This will return the blurred version of the original image.
